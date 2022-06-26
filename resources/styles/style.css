@@ -78,35 +78,37 @@ body {
 	border: 1px solid yellow;
 	border-width: 1px 0 0 0;
 	border-radius: 0 0 30px 0;
-	transition: transform 5s, border-radius 6s;
+	transition: transform 5s;
 	cursor: ne-resize;
+	box-shadow: 12px 5px yellow, 15px 12px black;
+	width: 95%;
 }
 
 #afterBlockInfo {
 	position: fixed;
 	background: rgba(0,0,0,0.3);
 	transform: translateX(-100%);
-	transition: transform 4.4s ease-out;
+	transition: transform 4.4s ease;
 	cursor: ne-resize;
+	box-shadow: -20px -100px 100em lightcyan;
 } 
 
 #verticalContainer #blockInfo:hover {
-	transform: translateX(300%);
-	border-radius: 0;
+	transform: translateX(315%);
 }
 
 #afterBlockInfo #afterImg {
-	width: 190px;
+	width: 170px;
 }
 
 main:hover #afterBlockInfo {
-	transform: translateX(570%);
+	transform: translateX(635%);
 }
 
 #verticalContainer #blockInfo h1 {
 	color: white;
 	font-family:'Rubik Moonrocks', cursive;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 	margin-top: 40%;
 }
@@ -115,12 +117,18 @@ main:hover #afterBlockInfo {
 	background: rgba(255, 255, 255, 0.5);
 	color: white;
 	font-size: 20px;
-	padding: 40px;
+	margin-top: 20px;
+	padding: 20px 40px 40px 40px;
 	border-radius: 50% 50% 0 0;
 }
 
+#verticalContainer #menu:hover {
+	background: -webkit-linear-gradient(90deg, #f0ebd9,#ede6d0,#decece,#866a88);
+	background: linear-gradient(90deg, #f0ebd9,#ede6d0,#decece,#866a88);
+}
+
 #verticalContainer #menu li {
-	margin: 20px;
+	margin: 15px;
 	border-radius: 80% 0 0 0;
 }
 
@@ -166,6 +174,11 @@ main:hover #afterBlockInfo {
 	border-radius: 0 0 20% 20%;
 }
 
+#verticalContainer #history:hover {
+	background: -webkit-linear-gradient(90deg, #0080bf,#32cd32);
+	background: linear-gradient(90deg, #0080bf,#32cd32);
+}
+
 #verticalContainer #history p {
 	margin-top: 20%;
 }
@@ -188,6 +201,7 @@ main:hover #afterBlockInfo {
 	border-width: 1px 0 0 1px;
 	border-radius: 30px;
 	transition: opacity .6s cubic-bezier(0, 0, 0, 3);
+	box-shadow: 10px 5px rgba(100,100,100,0.7);
 }
 
 #gorizontalContainer #mainImg:hover {
