@@ -123,8 +123,8 @@ main:hover #afterBlockInfo {
 }
 
 #verticalContainer #menu:hover {
-	background: -webkit-linear-gradient(90deg, #f0ebd9,#ede6d0,#decece,#866a88);
-	background: linear-gradient(90deg, #f0ebd9,#ede6d0,#decece,#866a88);
+	background: -webkit-linear-gradient(90deg, transparent,#866a88);
+	background: linear-gradient(90deg, transparent,#866a88);
 }
 
 #verticalContainer #menu li {
@@ -175,8 +175,8 @@ main:hover #afterBlockInfo {
 }
 
 #verticalContainer #history:hover {
-	background: -webkit-linear-gradient(90deg, #0080bf,#32cd32);
-	background: linear-gradient(90deg, #0080bf,#32cd32);
+	background: -webkit-linear-gradient(90deg, transparent,#32cd32);
+	background: linear-gradient(90deg, transparent,#32cd32);
 }
 
 #verticalContainer #history p {
@@ -206,19 +206,23 @@ main:hover #afterBlockInfo {
 
 #gorizontalContainer #mainImg:hover {
 	opacity: 0.5;
+	box-shadow: 10px 5px rgba(150,255,100,0.7);
 }
 
 @media (max-width: 720px) {
+
 	#verticalContainer {
 		width: 100%;
 	}
+
 	#gorizontalContainer {
 		width: 100%;
 		float: left;
 	}
+
 	#gorizontalContainer #mainImg {
 		width: 100%;
 		max-height: 100%;
 		border-radius: 0;
-	}
+	}2
 }
