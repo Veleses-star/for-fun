@@ -84,25 +84,8 @@ body {
 	width: 95%;
 }
 
-#afterBlockInfo {
-	position: fixed;
-	background: rgba(0,0,0,0.3);
-	transform: translateX(-100%);
-	transition: transform 4.4s ease;
-	cursor: ne-resize;
-	box-shadow: -20px -100px 100em lightcyan;
-} 
-
 #verticalContainer #blockInfo:hover {
 	transform: translateX(315%);
-}
-
-#afterBlockInfo #afterImg {
-	width: 170px;
-}
-
-main:hover #afterBlockInfo {
-	transform: translateX(635%);
 }
 
 #verticalContainer #blockInfo h1 {
@@ -125,6 +108,23 @@ main:hover #afterBlockInfo {
 #verticalContainer #menu:hover {
 	background: -webkit-linear-gradient(90deg, transparent,#866a88);
 	background: linear-gradient(90deg, transparent,#866a88);
+}
+
+#afterBlockInfo {
+	position: fixed;
+	background: rgba(0,0,0,0.3);
+	transform: translateX(-100%);
+	transition: transform 4.4s ease;
+	cursor: ne-resize;
+	box-shadow: -20px -100px 100em lightcyan;
+} 
+
+#afterBlockInfo #afterImg {
+	width: 170px;
+}
+
+main:hover #afterBlockInfo {
+	transform: translateX(635%);
 }
 
 #verticalContainer #menu li {
@@ -164,6 +164,15 @@ main:hover #afterBlockInfo {
 	background: rgba(255,255,0,0.5);
 }
 
+#discord, #vkontakte, #telegram, #github {
+    background-color: #ccc;
+    border: 1px solid transparent;
+    -webkit-animation: glow 1.0s infinite alternate;  
+     -webkit-transition: border 1.0s linear, box-shadow 1.0s linear;
+       -moz-transition: border 1.0s linear, box-shadow 1.0s linear;
+            transition: border 1.0s linear, box-shadow 1.0s linear;
+}
+
 #verticalContainer #history {
 	background: rgba(255, 255, 255, 0.5);
 	color: black;
@@ -184,29 +193,35 @@ main:hover #afterBlockInfo {
 }
 
 #gorizontalContainer {
-	background: rgba(255,255,255,0.3);
-	width: 75%;
-	max-height: 100%;
-	display: inline-block;
-	float: right;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  float: right;
+  margin: 200px 300px 0 0;
 }
 
-#gorizontalContainer #mainImg {
-	position: fixed;
-	margin-top: 16%;
-	margin-left: 15%;
-	opacity: 0.4;
-	width: 600px;
-	display: block;
-	border-width: 1px 0 0 1px;
-	border-radius: 30px;
-	transition: opacity .6s cubic-bezier(0, 0, 0, 3);
-	box-shadow: 10px 5px rgba(100,100,100,0.7);
+#mainImg {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  position: relative;
+  cursor: help;
+  border-radius: 10px;
+  transition: all 3s;
 }
 
-#gorizontalContainer #mainImg:hover {
-	opacity: 0.5;
-	box-shadow: 10px 5px rgba(150,255,100,0.7);
+#gorizontalContainer:hover #mainImg {
+  transform: rotateX(25deg) translateZ(5px);
+  box-shadow: 30px 0 2px blue, -30px 0 2px blue, 0 30px 1em rgba(0,0,0,0.5);
+}
+
+@keyframes glow {
+    to {
+         border-color: rgba(100,100,100,0.7);
+    -webkit-box-shadow: 0 0 5px rgba(100,100,100,0.7);
+       -moz-box-shadow: 0 0 5px rgba(100,100,100,0.7);
+            box-shadow: 0 0 5px rgba(100,100,100,0.7);
+    }
 }
 
 @media (max-width: 720px) {
@@ -218,11 +233,13 @@ main:hover #afterBlockInfo {
 	#gorizontalContainer {
 		width: 100%;
 		float: left;
+		margin: 0;
+		text-align: center;
 	}
 
 	#gorizontalContainer #mainImg {
-		width: 100%;
-		max-height: 100%;
-		border-radius: 0;
-	}2
+		width: 60%;
+		height: 60%;
+		margin-top: 100px;
+	}
 }
