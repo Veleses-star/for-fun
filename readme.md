@@ -1,3 +1,3 @@
 Сайт, написанный по фану за вечер.
 
-[veleses-star.github.io](https://veleses-star.github.io/)
+[click For Fun](https://veleses-star.github.io/for-fun)
